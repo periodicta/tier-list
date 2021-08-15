@@ -53,11 +53,6 @@
 	
 	<div id="tablewrap"><table id="tablemain"><tbody>
 		<tr>
-			<td class="labelHolder" contenteditable="true"><span class="label">S</span></td>
-			<td><div class="tier sort" id="rows"></div></td>
-			<td><div id="settings"></div><div id="moveButtons"><div id="moveUp"></div><div id="moveDown"></div></div></td>
-		</tr>
-		<tr>
 			<td class="labelHolder" contenteditable="true"><span class="label">A</span></td>
 			<td class="tierHolder"><div class="tier sort" id="rows"></div></td>
 			<td class="settingsContainer"><div id="settings"></div><div id="moveButtons"><div id="moveUp"></div><div id="moveDown"></div></div></td>
@@ -74,11 +69,6 @@
 		</tr>
 		<tr>
 			<td class="labelHolder" contenteditable="true"><span class="label">D</span></td>
-			<td class="tierHolder"><div class="tier sort" id="rows"></div></td>
-			<td class="settingsContainer"><div id="settings"></div><div id="moveButtons"><div id="moveUp"></div><div id="moveDown"></div></div></td>
-		</tr>
-		<tr>
-			<td class="labelHolder" contenteditable="true"><span class="label">E</span></td>
 			<td class="tierHolder"><div class="tier sort" id="rows"></div></td>
 			<td class="settingsContainer"><div id="settings"></div><div id="moveButtons"><div id="moveUp"></div><div id="moveDown"></div></div></td>
 		</tr>
@@ -166,13 +156,11 @@
 		var listStickied = false;
 		var colors = ["#FF7F7F","#FFBF7F","#FFDF7F","#FFFF7F","#BFFF7F","#7FFF7F","#7FFFFF","#7FBFFF","#7F7FFF","#FF7FFF","#BF7FBF","#3B3B3A","#858585","#CFCFCF","#F7F7F7"];
 		// first is the row in the table of the tier, second is the index of its color
-		var tierDefaults = [ [$("tr:nth-of-type(1)"), 10],
+		var tierDefaults = [ [$("tr:nth-of-type(1)"), 0],
 					  [$("tr:nth-of-type(2)"), 1],
 					  [$("tr:nth-of-type(3)"), 3],
-					  [$("tr:nth-of-type(4)"), 5],
-					  [$("tr:nth-of-type(5)"), 7],
-					  [$("tr:nth-of-type(6)"), 8],
-					  [$("tr:nth-of-type(7)"), 9] ];
+					  [$("tr:nth-of-type(4)"), 8],
+					  [$("tr:nth-of-type(5)"), 10] ];
 		var tier = []; // format: [element, color id]
 		var tierlist = [];
 		var currentTier;
